@@ -3,7 +3,6 @@ import hou
 
 root = tk.Tk()
 root.withdraw()
-root.update()
 node = root.call("clipboard", "get")
 root.destroy()
 
