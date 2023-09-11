@@ -1,10 +1,6 @@
-import tkinter as tk
 import hou
 
-root = tk.Tk()
-root.withdraw()
-node = root.call("clipboard", "get")
-root.destroy()
+node = hou.ui.getTextFromClipboard()
 
 network_pane = hou.ui.paneTabOfType(hou.paneTabType.NetworkEditor)
 obj = hou.node(network_pane.pwd().path())
