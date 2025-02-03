@@ -1,3 +1,5 @@
+# PasteOBJ
+
 ## 🚀 Installation
 
 Let's get started! To install **PasteOBJ** and take advantage of its powerful features, follow these simple steps:
