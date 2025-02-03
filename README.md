@@ -1,12 +1,28 @@
-# MMF_Hou_PasteOBJ
-This tool will allow you to copy any node and create an object merge with the copied node as a objpath.
+## 🚀 Installation
 
-The installation for this tool is going to be pretty simple:
-- Copy the code that you have in the node.py file and paste it inside a new tool that you can create on your custom shelf.
-  - For better understanding, you'll need to create a new shelf. Then, you'll need to right click on top of it and select the new tool option.
-  - Once you created it, go to the script tab and paste the code.
-- If you want to be able to create the node using the tab key, you'll need to use the context tab from the tool and tick the SOP option.
+Let's get started! To install **PasteOBJ** and take advantage of its powerful features, follow these simple steps:
 
-#
+1. **Download** the `PasteOBJ` folder from this repository.
+2. **Copy** the downloaded folder to the `$HOUDINI_USER_PREF_DIR` (`C:\Users\{Your User}\Documents\houdini{Your Houdini Version}`):
+   > *Tip:* If you prefer, you can organize the folder inside subfolders, but make sure to remember the exact path for the next steps!
 
-Hello to everyone, I’m @marcmesafervfx and I'm an FXTD enthusiast of programming and optimization approaches. I've been creating tools and scripts with Python, VEX and XML which gave the artists the opportunity to create FX smoothly. Working hard to make my department and other's life easier with fast and efficient solutions. For any questions, don't hesistate to contact me via email: marcmesafervfx@gmail.com
+3. **Launch** Houdini.
+4. Create a **Shelf** or use an existing one.
+5. Add a new **Tool** and paste the following code in the `Script` tab (make sure to adjust the path according to your setup):
+```python
+import sys  
+sys.path.append("Path where the PasteOBJ folder is located")  
+   
+from paste import pasteNode
+
+pasteNode()
+```
+
+6. If you want to customize the **icon** of the tool, go to the `Options` tab and change the image. The default icon is available in:  
+   `./PasteOBJ/icon/draft_icon.png`.
+
+## ✨ Features
+
+- **OBJ Context:** Copy any node and paste a reference object merge node to any object context network.
+- **TOP Context:** Copy any file cache node and paste a reference fetch node to the render drive to any top context network.
+- **ROP Context:** Copy any file cache node and paste a reference fetch node to the render drive to any rop context network.
